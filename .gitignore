@@ -1,0 +1,5 @@
+/public/img/
+package.json
+/node_modules
+package-lock.json
+/public/fonts
