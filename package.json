@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon /src/app.js -e html,js,hbs",
-    "dist": "node generate.js",
-    "devdist": "nodemon generate.js -e hbs"
+    "dist": "nodemon generate.js --verbose -e html,js,css,hbs --ignore 'dist'"
   },
   "author": "",
   "license": "ISC",
