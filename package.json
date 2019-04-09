@@ -1,0 +1,24 @@
+{
+  "name": "commons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon /src/app.js -e html,js,hbs",
+    "dist": "node generate.js",
+    "devdist": "nodemon generate.js -e hbs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "handlebars": "^4.1.1",
+    "handlebars-generator": "^3.2.3",
+    "hbs": "^4.0.3"
+  }
+}
