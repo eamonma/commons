@@ -8,7 +8,8 @@ const files = [
     "faq/index.html",
     "resources/index.html",
     "teachers/index.html",
-    "tutor/index.html"
+    "tutor/index.html",
+    "styles.css"
 ]
 
 var partialsDir = __dirname + '/partials';
@@ -16,7 +17,7 @@ var filenames = fs.readdirSync(partialsDir);
 filenames.forEach(function (filename) {
     var matches = /^([^.]+).hbs$/.exec(filename);
     if (!matches) {
-    return;
+        return;
     }
     var name = matches[1];
     var template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');

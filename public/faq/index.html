@@ -8,48 +8,11 @@
 </head>
 
 <body>
-  <header>
-    <div class="title">
-      <a href="../"><img class="crest" src="../img/crest.png" alt="Handsworth Crest"></a>
-      <h1><a href="../">Handsworth Learning Commons</a></h1>
-    </div>
-    <nav>
-      <ul>
-        <a class="links" href="../">
-          <li>Home</li>
-        </a>
-        <a class="links" href="../books">
-          <li>Books</li>
-        </a>
-        <a class="links" href="../resources">
-          <li>Resources</li>
-        </a>
-        <a class="links currentTab" href="#">
-          <li>FAQ</li>
-        </a>
-        <a class="links" href="../teachers">
-          <li>Teachers</li>
-        </a>
-        <a class="links" href="../tutor">
-          <li>Peer tutoring</li>
-        </a>
-        <!-- <a class="darkToggle links" href="#">
-          <li class="links">Dark mode</li>
-          <div class="darkSwitch">
-            <input type="checkbox" name="darkSwitch" class="darkSwitch-checkbox" id="darkSwitch">
-            <label class="darkSwitch-label" for="darkSwitch">
-              <span class="darkSwitch-inner"></span>
-              <span class="darkSwitch-switch"></span>
-          </label>
-          </div>
-        </a> -->
-      </ul>
-    </nav>
-  </header>
+  {{>header}}
 
   <!-- faq -->
-  <div class="carry columns center">
-    <section class="faq">
+  <div class="carry columns">
+    <div class="faq content">
       <h2>Frequently asked questions</h2>
 
       <div class="question">
@@ -79,21 +42,12 @@
       </div>
       </p>
 
-    </section>
-  </div>
-  <div class="mobileMenu">
-    <div>
-      <button class="b hamburger hamburger--spin icon" type="button">
-        <span class="b hamburger-box">
-          <span class="b hamburger-inner"></span>
-        </span>
-      </button>
     </div>
   </div>
-  <footer>
-    <p><a class="ext" href="https://handsworth.ca">Handsworth</a></p>
-    <p>&copy; 2019 <em>By Handsworth students <a href="https://eamon.me">Eamon Ma</a></em>, <em><a href="https://www.linkedin.com/in/owen-holman/">Owen Holman</a></em>, and <em><a href="https://www.jacob-schwartz.com/">Jacob Schwartz</a></em></p>
-  </footer>
+  {{>hamburger}}
+
+  {{>footer}}
+
 </body>
 <link rel="stylesheet" href="../burger.css">
 
