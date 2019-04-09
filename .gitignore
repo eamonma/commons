@@ -1,4 +1,4 @@
-/public/img/
+# /public/img/
 /node_modules
-/public/fonts
+# /public/fonts
 /dist
