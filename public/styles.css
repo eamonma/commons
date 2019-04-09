@@ -175,10 +175,29 @@ footer p {
   height: 100%;
 }
 
-.content div a {
-  display: block;
+.content a {
+  display: inline-block;
+  position: relative;
   min-height: 2em;
   line-height: 2em;
+}
+
+.content a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 1px solid #000;
+  transition: 0.2s cubic-bezier(.66,.11,.29,.65);
+}
+
+.content a:hover::before {
+  width: 100%;
 }
 
 .content li {
@@ -194,16 +213,6 @@ footer p {
   content: "";
   margin-left: 3px;
   background-image: url("img/ext.png");
-  background-size: 15px 15px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-}
-
-.pdf::before {
-  content: "";
-  margin: 0 3px 0 2px;
-  background-image: url("img/pdf.png");
   background-size: 15px 15px;
   display: inline-block;
   width: 15px;
