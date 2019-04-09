@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 @font-face {
   font-family: ssp;
@@ -74,6 +74,7 @@ h1 a, h1 a:hover, h1 a:visited, h1 a:active {
 h2 {
   border-bottom: 1.7px solid black;
   line-height: 1.5em;
+  margin-top: 0;
 }
 
 .question {
@@ -152,9 +153,10 @@ nav ul li {
 }
 
 h1 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: 220%;
-
+  margin: 10px 0;
 }
 
 #viewMore {
@@ -162,7 +164,7 @@ h1 {
 }
 
 footer {
-  padding: 10px 0 10px 20px;
+  padding: 5px 0 5px 20px;
   position: relative;
   margin-bottom: 0;
   background: #ecf0f1;
@@ -338,6 +340,7 @@ nav, .title {
   left: 0;
   font-size: 15px;
   height: 25px;
+  line-height: 20px;
 }
 
 .personalizeCourses ul li {
@@ -376,12 +379,9 @@ nav, .title {
     outline: default;
 }
 
-/*
-.pageTitle {
-  background: #aaa;
-  border: none;
+.content {
+  padding-top: 15px;
 }
-*/
 
 /* small screen styles */
 
@@ -392,6 +392,7 @@ nav, .title {
   /* headings */
   h1 {
     font-size: 1.7em;
+    padding-bottom: 5px;
     border-bottom: 1.7px solid black;
   }
   h2 {
@@ -494,103 +495,7 @@ nav, .title {
   .customize {
     display: block;
   }
-  /*body.dark nav {
-    transition: all 0.2s, background-color 0s;
-  }
-  body.dark a {
-    color: #BBDEFB;
-    text-decoration: underline;
-  }
-  body.dark, body.dark div, body.dark h1 a, body.dark footer {
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-  }
-  body.dark nav, body.dark nav ul, body.dark nav ul li {
-    background: #000;
-  }
-  body.dark .b {
-    background: #fff;
-    border-radius: 5px;
-  }
-  body.dark div.columns {
-    border-bottom: 1.7px solid white;
-  }
-  body.dark .book2, .book3, .book4, .book5  {
-    border-top: 1.7px dotted white;
-  }
-  body.dark h1 {
-    border-bottom: 1.7px solid white;
-  }
-  .darkSwitch {
-    display: block;
-    position: relative;
-    left: 70%;
-    top: -50px;
-    float: left;
-    width: 66px;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 36px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-  .darkSwitch-checkbox {
-    display: none;
-  }
-  .darkSwitch-label {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid #E3E3E3;
-    border-radius: 36px;
-  }
-  .darkSwitch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.2s ease-in 0s;
-  }
-  .darkSwitch-inner:before, .darkSwitch-inner:after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: 36px;
-    padding: 0;
-    line-height: 36px;
-    box-sizing: border-box;
-  }
-  .darkSwitch-inner:before {
-    content: "";
-    padding-left: 10px;
-    background-color: #000;
-  }
-  .darkSwitch-inner:after {
-    content: "";
-    padding-right: 10px;
-    background-color: #fff;
-  }
-  .darkSwitch-switch {
-    display: block;
-    width: 32px;
-    margin: 2px;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 26px;
-    border: 2px solid #E3E3E3;
-    border-radius: 36px;
-    transition: all 0.2s ease-in 0s;
-  }
-  .darkSwitch-checkbox:checked+.darkSwitch-label .darkSwitch-inner {
-    margin-left: 0;
-  }
-  .darkSwitch-checkbox:checked+.darkSwitch-label .darkSwitch-switch {
-    right: 0px;
-  }*/
 }
-
 
 /* big screen styles */
 
@@ -654,7 +559,7 @@ nav, .title {
   h1 {
     text-align: left;
     position: absolute;
-    top: -11px;
+    top: 6px;
     left: 63px;
   }
   .title {
