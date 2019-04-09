@@ -5,8 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon /src/app.js -e html,js,hbs",
-    "dist": "nodemon generate.js --verbose -e html,js,css,hbs --ignore 'dist'"
+    "dev": "nodemon generate.js --verbose -e html,js,css,hbs --ignore 'dist'",
+    "dist": "node generate.js"
   },
   "author": "",
   "license": "ISC",
