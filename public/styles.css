@@ -392,6 +392,15 @@ nav, .title {
   padding-top: 15px;
 }
 
+.meme {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.meme img {
+  min-width: 100%;
+}
+
 /* small screen styles */
 
 @media (max-width: 924px) {

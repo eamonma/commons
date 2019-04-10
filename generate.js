@@ -6,6 +6,7 @@ const files = [
     "books/index.html",
     "bugs/index.html",
     "faq/index.html",
+    "faq/peanuts.jpg",
     "resources/index.html",
     "resources/apai.pdf",
     "resources/mla.pdf",
