@@ -108,7 +108,8 @@ htmlFiles.forEach((file) => {
     const fileContent = fs.readFileSync("./dist/" + file.input, "utf8")
     const generated = uglifyhtml(fileContent, {
         collapseWhitespace: true,
-        removeRedundantAttributes: true
+        removeRedundantAttributes: true,
+        removeComments: true
     })
 
     fs.writeFileSync("./dist/" + file.input, generated, "utf-8")
