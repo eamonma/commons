@@ -25,7 +25,8 @@ const files = [
     "burger.css",
     "carousel.js",
     "favicon.ico",
-    "print.css"
+    "print.css",
+    "sitemap.xml"
 ]
 
 const match = (file, arrayToPushTo, regex) => {
