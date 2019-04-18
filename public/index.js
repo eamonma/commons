@@ -241,6 +241,8 @@ cancelChange.onclick = function () {
 // }
 
 var carousel = new Flickity(".carousel", {
-    autoplay: 500,
-    pauseAutoPlayOnHover: false
+    autoPlay: 2000,
+    pauseAutoPlayOnHover: false,
+    wrapAround: true,
+    lazyLoad: 2
 })
