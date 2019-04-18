@@ -238,9 +238,7 @@ footer p {
 }
 
 .carousel-item-1 {background-image: url(/img/carousel/1.jpg);}
-.carousel-item-2 {
-  background-image: url(/img/carousel/2.jpg);
-}
+.carousel-item-2 {background-image: url(/img/carousel/2.jpg);}
 .carousel-item-3 {background-image: url(/img/carousel/3.jpg);}
 .carousel-item-4 {background-image: url(/img/carousel/4.jpg);}
 .carousel-item-5 {background-image: url(/img/carousel/5.jpg);}
@@ -248,27 +246,6 @@ footer p {
 .carousel-item-7 {background-image: url(/img/carousel/7.jpg);}
 .carousel-item-8 {background-image: url(/img/carousel/8.jpg);}
 .carousel-item-9 {background-image: url(/img/carousel/9.jpg);}
-/* .carousel-item-10 {background-image: url(/img/carousel/10.jpg);} */
-
-/*
-.carousel div {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel img{
-  width: 100%;
-}
-
-.flickity-viewport {
-  width: 100%;
-  /* height: auto !important; 
-}
-
-.flickity-slider div {
-  height: 400px;
-} */
 
 nav, .title {
   -webkit-user-select: none;

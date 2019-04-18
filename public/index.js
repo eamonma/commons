@@ -217,29 +217,6 @@ cancelChange.onclick = function () {
     personalizeCourses.classList.remove("show");
 }
 
-// var carouselObject = document.getElementsByClassName("carousel")[0];
-// var carousel = new Siema({
-//     selector: carouselObject,
-//     duration: 500,
-//     easing: 'ease-in',
-//     perPage: 1,
-//     startIndex: 0,
-//     draggable: true,
-//     multipleDrag: true,
-//     threshold: 20,
-//     loop: true,
-//     rtl: false,
-//     onInit: () => {},
-//     onChange: () => {},
-// });
-// var nextSlide = setInterval(() => carousel.next(), 3000);
-// carouselObject.onmousedown = function () {
-//     clearInterval(nextSlide);
-// }
-// carouselObject.onmouseup = function () {
-//     nextSlide = setInterval(() => carousel.next(), 3000);
-// }
-
 var carousel = new Flickity(".carousel", {
     autoPlay: 2000,
     pauseAutoPlayOnHover: false,

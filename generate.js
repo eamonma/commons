@@ -1,5 +1,8 @@
 const fs = require("fs")
 const hbs = require("hbs")
+const uglify = require("uglify-js")
+const uglifycss = require("uglifycss")
+const uglifyhtml = require("html-minifier").minify
 
 const files = [
     "index.html",
@@ -24,6 +27,12 @@ const files = [
     "favicon.ico",
     "print.css"
 ]
+
+const match = (file, arrayToPushTo, regex) => {
+    const fileMatch = file.match(regex)
+    if(fileMatch) 
+        arrayToPushTo.push(fileMatch)
+}
 
 let filesDirs = files.map((element) => element.split("/")[0])
 filesDirs = filesDirs.filter((element) => !element.includes("."))
@@ -69,4 +78,37 @@ files.forEach((element) => {
     
     fs.writeFileSync("./dist/" + element, generated, "utf-8")
     
+})
+
+const jsFiles = []
+const cssFiles = []
+const htmlFiles = []
+files.forEach((file) => {
+    match(file, jsFiles, /.js$/)
+    match(file, cssFiles, /.css$/)
+    match(file, htmlFiles, /.html$/)
+})
+
+jsFiles.forEach((file) => { //minify js files
+    const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
+    const generated = uglify.minify(fileContent)
+
+    fs.writeFileSync("./dist/" + file.input, generated.code, "utf-8")
+})
+
+cssFiles.forEach((file) => {
+    const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
+    const generated = uglifycss.processString(fileContent)
+
+    fs.writeFileSync("./dist/" + file.input, generated, "utf-8")
+})
+
+htmlFiles.forEach((file) => {
+    const fileContent = fs.readFileSync("./dist/" + file.input, "utf8")
+    const generated = uglifyhtml(fileContent, {
+        collapseWhitespace: true,
+        removeRedundantAttributes: true
+    })
+
+    fs.writeFileSync("./dist/" + file.input, generated, "utf-8")
 })
