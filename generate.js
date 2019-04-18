@@ -3,6 +3,7 @@ const hbs = require("hbs")
 
 const files = [
     "index.html",
+    "index.js",
     "books/index.html",
     "bugs/index.html",
     "faq/index.html",

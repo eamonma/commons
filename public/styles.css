@@ -220,7 +220,7 @@ footer p {
 }
 
 .carousel {
-  padding: 0 !important;
+  /* padding: 0 !important; */
   height: 50vh;
   overflow: hidden;
 }
@@ -230,64 +230,8 @@ footer p {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50vh;
+  /* height: 50vh; */
   background-position: center;
-}
-
-.carouselImage1 {
-  background-image: url("img/carousel/1.jpg");
-}
-
-.carouselImage2 {
-  background-image: url("img/carousel/2.jpg");
-}
-
-.carouselImage3 {
-  background-image: url("img/carousel/3.jpg");
-}
-
-.carouselImage4 {
-  background-image: url("img/carousel/4.jpg");
-}
-
-.carouselImage5 {
-  background-image: url("img/carousel/5.jpg");
-}
-
-.carouselImage6 {
-  background-image: url("img/carousel/6.jpg");
-}
-
-.carouselImage7 {
-  background-image: url("img/carousel/7.jpg");
-}
-
-.carouselImage8 {
-  background-image: url("img/carousel/8.jpg");
-}
-
-.carouselImage9 {
-  background-image: url("img/carousel/9.jpg");
-}
-
-.carouselImage10 {
-  background-image: url("img/carousel/10.jpg");
-}
-
-.carouselImage11 {
-  background-image: url("img/carousel/11.jpg");
-}
-
-.carouselImage12 {
-  background-image: url("img/carousel/12.jpg");
-}
-
-.carouselImage13 {
-  background-image: url("img/carousel/13.jpg");
-}
-
-.carouselImage14 {
-  background-image: url("img/carousel/14.jpg");
 }
 
 nav, .title {
