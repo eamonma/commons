@@ -220,7 +220,7 @@ footer p {
 }
 
 .carousel {
-  padding: 5px !important;
+  padding: 0 !important;
   height: 500px;
   /* max-height: 700px;
   min-height: 300px; */
