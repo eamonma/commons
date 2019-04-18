@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://commons.handsworth.ca/</loc>
+  <lastmod>2019-04-10T04:58:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/books/</loc>
+  <lastmod>2019-04-10T04:58:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/resources/</loc>
+  <lastmod>2019-04-10T04:58:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/faq/</loc>
+  <lastmod>2019-04-10T04:58:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/teachers/</loc>
+  <lastmod>2019-04-10T04:58:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/tutor/</loc>
+  <lastmod>2019-04-12T04:24:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/resources/mla.pdf</loc>
+  <lastmod>2019-03-16T00:22:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/resources/mlaw.pdf</loc>
+  <lastmod>2019-02-28T00:14:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/resources/mlai.pdf</loc>
+  <lastmod>2019-03-16T00:22:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/resources/apai.pdf</loc>
+  <lastmod>2019-03-16T00:21:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://commons.handsworth.ca/tutor/signup.docx</loc>
+  <lastmod>2019-02-03T20:18:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
