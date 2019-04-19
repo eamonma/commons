@@ -287,11 +287,10 @@ m.get("#cancel").onclick = function(e) {
     }
 }
 
-m.get("#clear-all").onclick = function() {
+m.get("#clear-all").onclick = function(e) {
+    e.preventDefault()
     if(confirm("Are you sure?")) {
-        _.deleteCourses(function() {
-            console.log("Deleted courses");
-            
+        _.deleteCourses("courses", function() {
             window.location.reload()
         })
     }
