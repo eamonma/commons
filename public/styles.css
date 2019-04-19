@@ -440,9 +440,8 @@ button {
     float: none;
     width: 100%;
   }
-  .carousel div, .carousel {
-    height: 200px;
-    height: 35vh;
+  .carousel {
+    max-height: 40vh;
   }
   .b {
     z-index: 999;
@@ -467,6 +466,9 @@ button {
   }
   .customize {
     display: block;
+  }
+  .flickity-prev-next-button.flickity-button {
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 

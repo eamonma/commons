@@ -227,7 +227,7 @@ try {
 } catch (e) {}
 
 var carousel = new Flickity(m.get(".carousel"), {
-    autoPlay: 2000,
+    autoPlay: 3000,
     pauseAutoPlayOnHover: false,
     wrapAround: true,
     lazyLoad: 2
