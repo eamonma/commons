@@ -89,12 +89,12 @@ files.forEach((file) => {
     match(file, htmlFiles, /.html$/)
 })
 
-// jsFiles.forEach((file) => { //minify js files
-//     const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
-//     const generated = uglify.minify(fileContent)
-
-//     fs.writeFileSync("./dist/" + file.input, generated.code, "utf-8")
-// })
+jsFiles.forEach((file) => { //minify js files
+    const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
+    const generated = uglify.minify(fileContent)
+    
+    fs.writeFileSync("./dist/" + file.input, generated.code, "utf-8")
+})
 
 cssFiles.forEach((file) => {
     const fileContent = fs.readFileSync("./public/" + file.input, "utf8")

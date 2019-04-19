@@ -285,7 +285,7 @@ m.get("#cancel").onclick = function(e) {
     }
 }
 
-m.get("#clear-all").onclick = () => {
+m.get("#clear-all").onclick = function() {
     if(confirm("Are you sure?")) {
         _.deleteCourses()
         window.location.reload()
