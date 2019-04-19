@@ -64,7 +64,7 @@ var schedule = {
         },
         setCourses: function (courses, name) {
             name = name || "courses"
-            return localStorage.setItem(name, JSON.stringify(courses));
+            return localStorage.setItem(name, courses);
         },
         getCourses: function (name) {
             name = name || "courses"
