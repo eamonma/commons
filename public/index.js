@@ -284,3 +284,10 @@ m.get("#cancel").onclick = function(e) {
         toggleSetCourses()
     }
 }
+
+m.get("#clear-all").onclick = () => {
+    if(confirm("Are you sure?")) {
+        _.deleteCourses()
+        window.location.reload()
+    }
+}
