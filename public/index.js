@@ -83,8 +83,9 @@ var schedule = {
             }
             return result;
         },
-        deleteCourses: function () {
+        deleteCourses: function (cb) {
             localStorage.removeItem("courses");
+            cb()
         },
         coursesToArray: function (list) {
             if(Array.isArray(list)) {
@@ -287,7 +288,8 @@ m.get("#cancel").onclick = function(e) {
 
 m.get("#clear-all").onclick = function() {
     if(confirm("Are you sure?")) {
-        _.deleteCourses()
-        window.location.reload()
+        _.deleteCourses(function() {
+            window.location.reload()
+        })
     }
 }
