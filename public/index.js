@@ -1,3 +1,5 @@
+"use strict";var m={get:function get(a){return"#"===a.charAt(0)?document.getElementById(a.substring(1,a.length)):"."===a.charAt(0)?document.getElementsByClassName(a.substring(1,a.length))[0]:document.getElementsByTagName(a)[0]},getS:function getS(a){return"#"===a.charAt(0)?[document.getElementById(a.substring(1,a.length))]:"."===a.charAt(0)?document.getElementsByClassName(a.substring(1,a.length)):document.getElementsByTagName(a)}};
+
 var weekdays = [
     "Sunday",
     "Monday",
@@ -60,11 +62,13 @@ var schedule = {
         getFourthBlock: function (day, courses) {
             return (day === 1) ? (courses[3]) : (courses[7]);
         },
-        setCourses: function (courses) {
-            return localStorage.setItem("courses", JSON.stringify(courses));
+        setCourses: function (courses, name) {
+            name = name || "courses"
+            return localStorage.setItem(name, JSON.stringify(courses));
         },
-        getCourses: function () {
-            return JSON.parse(localStorage.getItem("courses"));
+        getCourses: function (name) {
+            name = name || "courses"
+            return JSON.parse(localStorage.getItem(name));
         },
         promptCourses: function (length, list) {
             //list of items with input fields
@@ -83,6 +87,9 @@ var schedule = {
             localStorage.removeItem("courses");
         },
         coursesToArray: function (list) {
+            if(Array.isArray(list)) {
+                return list
+            }
             var arr = [];
             list.forEach(function (course) {
                 arr.push(course.name);
@@ -90,7 +97,7 @@ var schedule = {
             return arr;
         }
     },
-    generate: function (weekNo, courses) {
+    generate: function (courses) {
         var weeks = [];
         var weekOne = [];
         var weekTwo = [];
@@ -100,11 +107,9 @@ var schedule = {
         var twoMorning = two.slice(0, 3);
         var _ = this.utility;
 
-        var returnedOne = [];
-        returnedOne = oneMorning.slice(0);
+        var returnedOne = oneMorning.slice(0);
 
-        var returnedTwo = [];
-        returnedTwo = twoMorning.slice(0);
+        var returnedTwo = twoMorning.slice(0);
 
         for (var i = 0; i < 10; i++) {
             if (i % 2 === 0) {
@@ -114,7 +119,7 @@ var schedule = {
                     weeks.push(oneMorning);
                     continue;
                 }
-                var tempArr = returnedOne;
+                var tempArr = returnedOne;                
                 tempArr = _.queue(returnedOne);
                 weeks.push(tempArr.slice(0));
             } else {
@@ -129,11 +134,20 @@ var schedule = {
                 weeks.push(tempArr.slice(0));
             }
         }
+        var j = 0;
+        weeks.forEach(function(day) {
+            var finalBlock = j % 2 === 0 ? courses[3] : courses[7]
+            j++
+            day.push(finalBlock)
+        })
 
         weekOne = weeks.slice(0, 5);
         weekTwo = weeks.slice(5);
-        // returns weekOne for week 1
-        return (weekNo === 1) ? (weekOne) : (weekTwo);
+        
+        return {
+            weekOne: weekOne,
+            weekTwo: weekTwo,
+        }
     }
 };
 var _ = schedule.utility;
@@ -142,8 +156,10 @@ try {
 } catch (e) {
     var alreadySetCourses = null;
 }
-console.log(alreadySetCourses);
+// console.log(alreadySetCourses);
 var courses = (alreadySetCourses) ? (_.coursesToArray(alreadySetCourses)) : [1, 2, 3, 4, 5, 6, 7, 8];
+// courses = alreadySetCourses
+
 var date = new Date();
 var ms = date.getTime();
 ms = _.gmtToLocal(ms) + 2.88e7;
@@ -151,9 +167,13 @@ var dayOfMonth = date.getDate();
 var days = _.daysSince(ms);
 var dayNo = _.dayNo(days);
 var weekNo = _.weekNo(days);
-var weekday = _.weekday(days);
+var weekday = date.getDay();
 var hours = date.getHours();
-var tomorrowOrNot = hours > 15 ? "(tomorrow)" : "";
+var tomorrowOrNot = hours > 15 ? "(tomorrow)": "";
+if(hours > 15) {
+    weekday++
+    dayNo++
+}
 var weekdayEnglish = weekdays[weekday];
 var month = date.getMonth();
 var monthEnglish = months[month];
@@ -162,21 +182,31 @@ var dateEnglish = weekdayEnglish + " " + monthEnglish + " " + ((!tomorrowOrNot) 
 if (weekday == 0 || weekday == 6) {
     dateEnglish = "";
 }
-var weekSchedule = schedule.generate(weekNo, courses);
+var weekSchedule = schedule.generate(courses);
+
+console.log(weekSchedule);
+
 try {
-    var rotationArray = weekSchedule[weekday - 1];
+    var rotationArray = weekSchedule[weekNo === 1 ? "weekOne" : "weekTwo"][weekday - 1];
 } catch (e) {
     var rotationArray = [];
+    console.log(e);
+    
 }
+
+console.log("rotation:", rotationArray);
+
 var rotation = "";
 try {
     for (var i = 0; i < rotationArray.length; i++) {
-        rotation += rotationArray[i] + "-";
+        if(i < rotationArray.length - 1)
+            rotation += rotationArray[i] + "-";
+        else 
+            rotation += rotationArray[i]
     }
 } catch (e) {}
-rotation += _.getFourthBlock(dayNo, courses);
-var notifDate = document.getElementById("date");
-var notifBlock = document.getElementById("blockRotation");
+var notifDate = m.get("#date")
+var notifBlock = m.get("#blockRotation");
 notifDate.innerText = dateEnglish;
 blockRotation.innerText = rotation;
 
@@ -184,42 +214,73 @@ if (weekday == 0 || weekday == 6) {
     document.getElementsByClassName("blocks")[0].innerText = "No school.";
 }
 
-var customizeButton = document.getElementById("customize");
-var confirmCourses = document.getElementById("confirmCourses");
-var personalizeCourses = document.getElementsByClassName("personalizeCourses")[0];
-var deleteCourses = document.getElementById("deleteCourses");
-var cancelChange = document.getElementById("cancelChange");
+var customizeButton = m.get("#customize")
+var personalizeCourses = m.get(".personalizeCourses");
+
 try {
     customizeButton.innerText = ((alreadySetCourses) ? ("Change courses") : ("Personalize"));
-    customizeButton.onclick = function () {
-        personalizeCourses.classList.add("show");
+    customizeButton.onclick = function() {
+        toggleSetCourses(1);
     }
-
 } catch (e) {}
 
-confirmCourses.onclick = function () {
-    _.deleteCourses();
-    var userCourses = document.getElementsByClassName("block");
-    var courses = _.promptCourses(8, userCourses);
-    _.setCourses(courses);
-    console.log(userCourses);
-    personalizeCourses.classList.remove("show");
-    console.log(courses);
-    window.location.reload();
-}
-
-deleteCourses.onclick = function () {
-    _.deleteCourses();
-    window.location.reload();
-}
-
-cancelChange.onclick = function () {
-    personalizeCourses.classList.remove("show");
-}
-
-var carousel = new Flickity(".carousel", {
+var carousel = new Flickity(m.get(".carousel"), {
     autoPlay: 2000,
     pauseAutoPlayOnHover: false,
     wrapAround: true,
     lazyLoad: 2
 })
+
+var preFillValues = function() {
+    var courses = _.getCourses()
+    try {
+        if(courses[0]) {
+            var form = m.get(".set-courses-form")
+            for(var i = 0; i < 8; i++) {
+                form["block-" + (i + 1)].value = courses[i]
+            }
+        }
+    } catch(e) {
+        console.log(e)
+    }
+}
+
+var toggleSetCourses = function(status) {
+    var form = m.get(".set-courses")
+    preFillValues()
+    form.style.top = status ? "0" : "-200%"
+}
+
+var getCourses = function() {
+    var form = m.get(".set-courses-form")
+    var courses = []
+    var emptyCourses = []
+    for(var i = 0; i < 8; i++) {
+        var value = form["block-" + (i + 1)].value
+        var pushValue = value.charAt(0).toUpperCase() + value.substring(1, value.length)
+        courses.push(pushValue)
+        if(!form["block-" + (i + 1)].value) {
+            emptyCourses.push(i + 1)
+        }
+    }
+
+    if(emptyCourses[0]) {
+        return alert("You left some blocks empty!")
+    }
+    _.setCourses(courses)
+    window.location.reload()
+}
+
+m.get(".set-courses-form").onsubmit = function(e) {
+    e.preventDefault()
+    getCourses()
+}
+
+m.get("#cancel").onclick = function(e) {
+    e.preventDefault()
+    if(!_.getCourses()) {
+        alert("You must set courses!")
+    } else {
+        toggleSetCourses()
+    }
+}

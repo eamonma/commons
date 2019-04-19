@@ -280,58 +280,56 @@ nav, .title {
   margin-top: 20px;
 }
 
-.personalizeCourses {
-  opacity: 0;
-  position: fixed;
-  top: 0;
+button {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  background: #fff;
+  font-family: "Source Serif Pro", serif;
+  border: 2px solid black;
+  border-radius: 2px;
+  transition: 0.2s cubic-bezier(.2,.64,.89,.61);
+}
+
+.set-courses #done:hover, .set:hover {
+  background: rgb(207, 255, 225);
+}
+
+.set-courses #cancel:hover, .clear:hover {
+  background: rgb(255, 230, 230);
+}
+
+.set-courses {
+  opacity: 1;
+  top: -200%;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  z-index: -9;
-  transition: 0.2s;
+  position: fixed;
+  background: #fff;
+  padding: 10px;
+  transition: 0.3s cubic-bezier(.2,.64,.89,.61);
+  text-align: center;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
-.personalizeCourses h3 {
-  width: 100%;
+.set-courses label {
+  margin-right: 7px;
+}
+
+.set-courses label::after {
+  content: ":"
+}
+
+.set-courses p {
+  margin: inherit auto;
   text-align: center;
 }
 
-.personalizeCourses ul li input {
-  box-sizing: border-box;
-  width: 150px;
-  position: absolute;
-  left: 0;
-  font-size: 15px;
-  height: 25px;
-  line-height: 20px;
-}
-
-.personalizeCourses ul li {
-  width: 150px;
-  height: 40px;
-  margin: 5px 0 5px 0;
-}
-
-.personalizeCourses a {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.personalizeCourses ul {
-  position: relative;
-  padding: 0;
-  width: 150px;
-  margin: 0 auto;
-}
-
-.personalizeCourses.show {
-  opacity: 0.98;
-  z-index: 9999;
-}
+/* end set courses */
 
 .studentsQuotes .quoteC, .tutorsQuotes .quoteC {
   padding-bottom: 10px;

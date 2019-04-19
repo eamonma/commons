@@ -75,8 +75,7 @@ files.forEach((element) => {
         fs.copyFileSync("./public/" + element, "./dist/" + element, "utf-8")
         return;
     }
-        
-    
+
     fs.writeFileSync("./dist/" + element, generated, "utf-8")
     
 })
@@ -90,12 +89,12 @@ files.forEach((file) => {
     match(file, htmlFiles, /.html$/)
 })
 
-jsFiles.forEach((file) => { //minify js files
-    const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
-    const generated = uglify.minify(fileContent)
+// jsFiles.forEach((file) => { //minify js files
+//     const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
+//     const generated = uglify.minify(fileContent)
 
-    fs.writeFileSync("./dist/" + file.input, generated.code, "utf-8")
-})
+//     fs.writeFileSync("./dist/" + file.input, generated.code, "utf-8")
+// })
 
 cssFiles.forEach((file) => {
     const fileContent = fs.readFileSync("./public/" + file.input, "utf8")
