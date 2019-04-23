@@ -1,5 +1,6 @@
 # Handsworth Learning Commons
 The git repo for Handsworth Learning Commons
+Created by Handsworth Students [Jacob Schwartz](https://jacob-schwartz.com), [Eamon Ma](https://eamonma.com) ~~and~~ [Owen Holman](https://owenholman.com/)
 
 ## Init
 `npm install` to install dependencies
