@@ -116,6 +116,5 @@ htmlFiles.forEach((file) => {
         removeRedundantAttributes: true,
         removeComments: true
     })
-
     fs.writeFileSync("./dist/" + file.input, generated, "utf-8")
 })
