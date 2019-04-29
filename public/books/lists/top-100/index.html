@@ -4,13 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Learning Commons</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Handsworth Learning Commons">
-  <link rel="icon" href="../../../favicon.ico" type="image/x-icon" />
-  <script type="text/javascript" src="../../../app.js">
-  </script>
-  <link rel="stylesheet" href="../../../styles.css">
+  {{>meta}}
   <style media="screen">
   table {
     margin: 0 auto;
@@ -39,41 +33,7 @@
 </head>
 
 <body>
-  <header>
-    <div class="title">
-      <a href="../../../"><img class="crest" src="../../../img/crest.png" alt="Handsworth Crest"></a>
-      <h1><a href="../../../">Handsworth Learning Commons</a></h1>
-    </div>
-    <nav>
-      <ul>
-        <a class="links" href="../../../">
-          <li>Home</li>
-        </a>
-        <a class="links" href="#">
-          <li class="currentTab">Books</li>
-        </a>
-        <a class="links" href="../../../resources">
-          <li>Resources</li>
-        </a>
-        <a class="links" href="../../../faq">
-          <li>FAQ</li>
-        </a>
-        <a class="links" href="../../../teachers">
-          <li>Teachers</li>
-        </a>
-        <!-- <a class="darkToggle links" href="#">
-          <li class="links">Dark mode</li>
-          <div class="darkSwitch">
-            <input type="checkbox" name="darkSwitch" class="darkSwitch-checkbox" id="darkSwitch">
-            <label class="darkSwitch-label" for="darkSwitch">
-              <span class="darkSwitch-inner"></span>
-              <span class="darkSwitch-switch"></span>
-          </label>
-          </div>
-        </a> -->
-      </ul>
-    </nav>
-  </header>
+  {{>header}}
 
   <div class="carry columns">
     <div class="list content">
@@ -480,21 +440,11 @@
   <div class="rarry columns">
 
   </div> -->
-  <footer>
-    <p><a class="ext" href="https://handsworth.ca">Handsworth</a></p>
-    <p>&copy; 2019 <em>By Handsworth students <a href="https://eamon.me">Eamon Ma</a></em>, <em><a href="https://www.linkedin.com/in/owen-holman/">Owen Holman</a></em>, and <em><a href="https://www.jacob-schwartz.com/">Jacob Schwartz</a></em></p>
-  </footer>
-  <div class="mobileMenu">
-    <div>
-      <button class="b hamburger hamburger--spin icon" type="button">
-        <span class="b hamburger-box">
-          <span class="b hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
-  </div>
+{{>hamburger}}
+
+{{>footer}}
 
 </body>
-<link rel="stylesheet" href="../../../burger.css">
+<link rel="stylesheet" href="/burger.css">
 
 </html>
