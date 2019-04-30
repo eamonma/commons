@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Learning Commons</title>
+  {{>meta}}
+  <style media="screen">
+  table {
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  thead {
+    font-weight: 800;
+  }
+
+  td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 10px;
+  }
+
+</style>
+</head>
+
+<body>
+  {{>header}}
+
+  <div class="carry columns">
+    <div class="list content">
+      <h2>Top Senior Teen Reads</h2>
+      <table class="listOne">
+        <thead>
+          <tr>
+            <td scope="col" class="author">Author</td>
+            <td scope="col" class="title">Title</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Note:
+
+          Jacob, fill in each table row (as indicated by <tr>) with
+            two sets of table data (as indicated by <td>).
+
+          Make sure the class for author/title is properly associated in
+            the order below.
+
+          If on the PDF's there is a third column, ignore that row. (Don't 
+            add '2017 list' as a third column)
+
+          For any questions, refer to the other lists I've created.
+
+          If there are multiple authors/contributors, replace 'and' with
+            -> &amp; <-
+
+          This file is for the Senior Teen Reads; there are two files that
+            need to be coded in (don't worry about alphabetical order),
+            just make sure there are NO GENDER DEFINING HEADLINES.
+
+          http://libguides.sd44.ca/ld.php?content_id=25337577
+          http://libguides.sd44.ca/ld.php?content_id=25337576
+
+           -->
+        <tr>
+          <td class="author">AUTHOR-NAME</td>
+          <td class="title">BOOK-TITLE</td>
+        </tr>
+        <tr>
+          <td class="author">AUTHOR-NAME</td>
+          <td class="title">BOOK-TITLE</td>
+        </tr>
+        <tr>
+          <td class="author">AUTHOR-NAME</td>
+          <td class="title">BOOK-TITLE</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+{{>hamburger}}
+
+{{>footer}}
+
+</body>
+<link rel="stylesheet" href="/burger.css">
+
+</html>
