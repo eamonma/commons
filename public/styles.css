@@ -55,7 +55,7 @@ a:hover {
   margin-right: 5px;
 }
 
-.staffPhoto {
+.staffPhoto, .chessPhoto {
   display: block;
   width: 80%;
   margin: 0 auto;
@@ -150,6 +150,11 @@ nav ul li {
 
 .cookieNotice {
   font-size: 0.3em;
+}
+
+.bookCredits {
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 h1 {
