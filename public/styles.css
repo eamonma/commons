@@ -55,7 +55,7 @@ a:hover {
   margin-right: 5px;
 }
 
-.staffPhoto, .chessPhoto {
+.staffPhoto, .chessPhoto, .booksPhoto, .rotwPhoto, .ptPhoto, .newsPhoto {
   display: block;
   width: 80%;
   margin: 0 auto;
@@ -250,6 +250,15 @@ footer p {
 .carousel-item-7 {background-image: url(/img/carousel/7.jpg);}
 .carousel-item-8 {background-image: url(/img/carousel/8.jpg);}
 .carousel-item-9 {background-image: url(/img/carousel/9.jpg);}
+
+.pt-carousel-item-1 {background-image: url(/img/pt/1.jpg);}
+.pt-carousel-item-2 {background-image: url(/img/pt/2.jpg);}
+.pt-carousel-item-3 {background-image: url(/img/pt/3.jpg);}
+.pt-carousel-item-4 {background-image: url(/img/pt/4.jpg);}
+.pt-carousel-item-5 {background-image: url(/img/pt/5.jpg);}
+.pt-carousel-item-6 {background-image: url(/img/pt/6.jpg);}
+.pt-carousel-item-7 {background-image: url(/img/pt/7.jpg);}
+.pt-carousel-item-8 {background-image: url(/img/pt/8.jpg);}
 
 nav, .title {
   -webkit-user-select: none;
