@@ -226,13 +226,6 @@ try {
     }
 } catch (e) {}
 
-var carousel = new Flickity(m.get(".carousel"), {
-    autoPlay: 3000,
-    pauseAutoPlayOnHover: false,
-    wrapAround: true,
-    lazyLoad: 2
-})
-
 var preFillValues = function() {
     var courses = _.getCourses()
     try {
