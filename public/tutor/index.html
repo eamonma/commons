@@ -29,7 +29,19 @@
       <p>Handsworth’s Peer Tutoring Program is a volunteer program that allows students to help their peers and give back to the school community. Peer tutors are matched up one-on-one or sometimes in small groups in the subject(s) they have volunteered
         to tutor. Any student, no matter what grade level, can sign up to peer tutor if they feel they are strong enough in a subject to assist others that may be struggling. If you are interested in becoming a peer tutor and giving back to the Handsworth
         community, please see Ms. McHugh in the Library Learning Commons for more information or drop off the signup sheet to her.</p>
-      <h3>Why should I become one?</h3>
+      <h3 id="txt" onclick=change()>Why should I become one?</h3>
+      <script>
+        function change() {
+        var norm = "Why should I become one?"
+        var ee = "Why is Gamora?"
+          var txt = document.getElementById("txt");
+          if (txt.innerHTML === norm) {
+            txt.innerHTML = ee;
+          } else {
+            txt.innerHTML = norm;
+          }
+        }
+        </script>
       <p>If you volunteer to become a peer tutor you will likely be making a huge impact on a student’s learning and giving them a better chance for success in school! Additionally, post-secondary institutions are always interested in seeing how their applicants
         have given back to their school communities and volunteer tutoring is a fabulous way to show this. Peer tutoring fosters a sense of school community and our abundance of student role models at this school is a large part of the reason Handsworth
         students continue to have some of the highest academic achievement levels in the province. In the words of Roman philosopher Seneca, “while we teach, we learn” and tutoring others is also a fantastic way to reinforce your own understanding and
