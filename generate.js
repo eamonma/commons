@@ -14,6 +14,8 @@ const files = [
     "books/lists/sports/index.html",
     "books/lists/top-100/index.html",
     "books/lists/travel/index.html",
+    "books/lists/junior-teen/index.html",
+    "books/lists/senior-teen/index.html",
     "bugs/index.html",
     "faq/index.html",
     "faq/peanuts.jpg",
