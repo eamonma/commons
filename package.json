@@ -1,0 +1,37 @@
+{
+  "name": "commons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon generate.js --verbose -e html,js,css,hbs --ignore 'dist'",
+    "dist": "node generate.js",
+    "deploy": "node generate.js && zip -r -X dist/Archive.zip dist && scp dist/Archive.zip root@commons.handsworth.ca:/var/www/commons.handsworth.ca/ && rm dist/Archive.zip",
+    "build": "parcel build public/*.html public/*/*.html --log-level 4 --out-dir prod",
+    "prod": "parcel build public/*.html public/*/*.html --log-level 4 --out-dir prod --no-source-maps"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "archiver": "^3.0.0",
+    "grunt": "^1.0.4",
+    "html-minifier": "^4.0.0",
+    "nodemon": "^1.18.10",
+    "parcel-plugin-imagemin": "^3.0.0",
+    "uglify-js": "^3.5.4",
+    "uglifycss": "0.0.29",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "yargs": "^13.2.2"
+  },
+  "dependencies": {
+    "directory-tree": "^2.2.1",
+    "express": "^4.16.4",
+    "handlebars": "^4.1.2",
+    "handlebars-generator": "^3.2.3",
+    "hbs": "^4.0.4",
+    "parcel": "^1.12.3",
+    "parcel-plugin-handlebars": "^0.4.4"
+  }
+}
