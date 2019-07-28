@@ -1,0 +1,39 @@
+.set-courses #done:hover,
+.set:hover {
+    background: rgb(207, 255, 225);
+}
+
+.set-courses #cancel:hover,
+.clear:hover {
+    background: rgb(255, 230, 230);
+}
+
+.set-courses {
+    opacity: 1;
+    top: -200%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fff;
+    padding: 10px;
+    transition: 0.3s cubic-bezier(.2, .64, .89, .61);
+    text-align: center;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.set-courses label {
+    margin-right: 7px;
+}
+
+.set-courses label::after {
+    content: ":"
+}
+
+.set-courses p {
+    margin: inherit auto;
+    text-align: center;
+}

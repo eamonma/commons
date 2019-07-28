@@ -1,0 +1,105 @@
+@media (min-width: 925px) {
+    a {
+        transition: 0.2s;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    nav {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        margin: 0;
+        background: #ecf0f1;
+        height: 3.5em;
+        top: 0;
+    }
+
+    nav ul {
+        height: 3.5em;
+        width: 900px;
+        position: absolute;
+        margin: auto;
+        padding: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    nav ul a,
+    nav ul a:active,
+    nav ul a:visited {
+        text-decoration: none;
+        color: #22303d;
+    }
+
+    nav ul a:hover {
+        color: #4c6b8a;
+    }
+
+    .columns {
+        margin: 0;
+        height: 40px;
+        height: auto;
+        float: left;
+    }
+
+    .content {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .larry,
+    .rarry {
+        width: 25%;
+        background: #f6f8f8;
+    }
+
+    .larry {
+        position: relative;
+        right: 50%;
+    }
+
+    .carry {
+        width: 50%;
+        min-height: 100%;
+        position: relative;
+        left: 25%;
+        background: #fff;
+    }
+
+    h1 {
+        text-align: left;
+        position: absolute;
+        top: 6px;
+        left: 63px;
+    }
+
+    .title {
+        margin: 10px 0 10px 10px;
+        height: 3.3em;
+        vertical-align: middle;
+    }
+
+    .center {
+        width: 50%;
+        max-width: 800px;
+        min-width: 600px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        float: none;
+        padding: 20px;
+    }
+
+    .darkSwitch {
+        display: none;
+    }
+
+    .blocks {
+        min-height: 3em;
+        line-height: 3em;
+        margin: 0;
+    }
+}

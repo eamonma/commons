@@ -8,6 +8,7 @@
     "dev": "nodemon generate.js --verbose -e html,js,css,hbs --ignore 'dist'",
     "dist": "node generate.js",
     "deploy": "node generate.js && zip -r -X dist/Archive.zip dist && scp dist/Archive.zip root@commons.handsworth.ca:/var/www/commons.handsworth.ca/ && rm dist/Archive.zip",
+    "serve": "parcel watch public/*.html public/*/*.html --log-level 4 --out-dir prod",
     "build": "parcel build public/*.html public/*/*.html --log-level 4 --out-dir prod",
     "prod": "parcel build public/*.html public/*/*.html --log-level 4 --out-dir prod --no-source-maps"
   },
@@ -32,6 +33,7 @@
     "handlebars-generator": "^3.2.3",
     "hbs": "^4.0.4",
     "parcel": "^1.12.3",
-    "parcel-plugin-handlebars": "^0.4.4"
+    "parcel-plugin-handlebars": "^0.4.4",
+    "sass": "^1.22.7"
   }
 }

@@ -1,0 +1,115 @@
+@import "./base/fonts";
+@import "./base/base";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/carousel";
+
+@import "./components/set-courses";
+@import "./components/books";
+
+@import "./components/footer";
+
+.staffPhoto,
+.chessPhoto,
+.booksPhoto,
+.rotwPhoto,
+.ptPhoto,
+.newsPhoto,
+.tfapPhoto,
+.rmcPhoto {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.staffs {
+  text-align: center;
+  width: 100%;
+}
+
+.question {
+  margin-top: 30px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+#viewMore {
+  display: inline-block;
+}
+
+.content a {
+  display: inline-block;
+  position: relative;
+  min-height: 2em;
+  line-height: 2em;
+}
+
+.content a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 1px solid #000;
+  transition: 0.2s cubic-bezier(.66, .11, .29, .65);
+}
+
+.content a:hover::before {
+  width: 100%;
+}
+
+.content li {
+  list-style: lower-roman;
+  padding-bottom: 5px;
+}
+
+
+.book1 {
+  padding-top: 0;
+  margin-top: 20px;
+}
+
+.studentsQuotes .quoteC,
+.tutorsQuotes .quoteC {
+  padding-bottom: 10px;
+}
+
+#signup {
+  padding-top: 10px;
+}
+
+#signup:focus {
+  outline: default;
+}
+
+.content {
+  padding-top: 15px;
+}
+
+.meme {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.meme img {
+  min-width: 100%;
+}
+
+/* small screen styles */
+
+@import "./components/small";
+
+/* big screen styles */
+
+@import "./components/big";
+
+html {
+  visibility: visible;
+  opacity: 1;
+}

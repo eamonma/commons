@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+@font-face {
+  font-family: ssp;
+  src: url("./fonts/otf/ssp.otf") format("otf"),
+  url("./fonts/woff/ssp.woff") format("woff"),
+  url("./fonts/woff2/ssp.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: ssp;
+  src: url("./fonts/otf/sspb.otf") format("otf"),
+  url("./fonts/woff/sspb.woff") format("woff"),
+  url("./fonts/woff2/sspb.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: ssp;
+  src: url("./fonts/otf/sspi.otf") format("otf"),
+  url("./fonts/woff/sspi.woff") format("woff"),
+  url("./fonts/woff2/sspi.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}

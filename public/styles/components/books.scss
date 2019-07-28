@@ -1,0 +1,48 @@
+.newBook img {
+    float: left;
+    height: 150px;
+    display: block;
+    margin-right: 20px;
+}
+
+.newBook {
+    min-height: 160px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.moreB {
+    border-top: 1.7px dotted black;
+}
+
+.quote {
+    text-indent: 5px;
+    font-family: "Georgia", serif;
+    font-style: italic;
+}
+
+.bookAuthor {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.quote::before,
+.quote::after {
+    content: "\"";
+}
+
+.quoteAuthor {
+    text-align: right;
+}
+
+.quoteAuthor::before {
+    content: "-";
+}
+
+.ftbook h3 {
+    margin-top: 10px;
+}
+
+.bookCredits {
+    font-size: 0.9em;
+}

@@ -1,0 +1,71 @@
+.crest {
+    display: inline-block;
+    height: 3em;
+    margin-right: 5px;
+}
+
+h1 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 220%;
+    margin: 10px 0;
+}
+
+h1 a,
+h1 a:hover,
+h1 a:visited,
+h1 a:active {
+    cursor: default;
+    color: #22303d;
+}
+
+h2 {
+    border-bottom: 1.7px solid black;
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+nav,
+.title {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.notifications {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 3em;
+    height: auto;
+    background-color: #e0eff6;
+}
+
+.blocks {
+    min-height: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.blocks::before {
+    content: "\24D8";
+    margin-right: 5px;
+}
+
+nav ul li,
+.personalizeCourses ul li {
+    list-style: none;
+    font-size: 1em;
+    height: 3.5em;
+    line-height: 3.5em;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    float: left;
+    display: block;
+}

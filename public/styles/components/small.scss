@@ -1,0 +1,136 @@
+@media (max-width: 924px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* headings */
+    h1 {
+        font-size: 1.7em;
+        padding-bottom: 5px;
+        border-bottom: 1.7px solid black;
+    }
+
+    h2 {
+        border: none;
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-style: italic;
+    }
+
+    /* layout */
+    div.columns {
+        border-bottom: 1.7px solid black;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    div.rarry {
+        display: block;
+        border-bottom: none;
+    }
+
+    div.center {
+        border-bottom: none;
+    }
+
+    div.question {
+        margin-bottom: 50px;
+    }
+
+    /* mobile nav */
+    .crest {
+        height: 3.7em;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    button.icon {
+        display: block;
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        margin: 0;
+        padding: 0;
+        top: 20px;
+        right: 15px;
+    }
+
+    nav {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-in;
+        background: #fff;
+        position: fixed;
+    }
+
+    nav.show {
+        display: block;
+        right: 0;
+        height: 100%;
+        opacity: 0.97;
+    }
+
+    nav ul {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px 10% 0 50px;
+    }
+
+    nav ul li {
+        text-align: left;
+        vertical-align: center;
+        float: none;
+        width: 100%;
+    }
+
+    .carousel {
+        max-height: 40vh;
+    }
+
+    .b {
+        z-index: 999;
+    }
+
+    button {
+        outline: none;
+    }
+
+    footer {
+        left: -20px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    #blockRotation {
+        white-space: nowrap;
+    }
+
+    .blocks {
+        padding: 15px;
+    }
+
+    .personalizeCourses {
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .customize {
+        display: block;
+    }
+
+    .flickity-prev-next-button.flickity-button {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}

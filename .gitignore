@@ -3,6 +3,6 @@
 # /public/fonts
 /dist
 /public/img
-/public/fonts
+/public/styles/fonts
 /prod
 .cache

@@ -1,0 +1,90 @@
+.carousel-item-1 {
+    background-image: url(/img/carousel/1.jpg);
+}
+
+.carousel-item-2 {
+    background-image: url(/img/carousel/2.jpg);
+}
+
+.carousel-item-3 {
+    background-image: url(/img/carousel/3.jpg);
+}
+
+.carousel-item-4 {
+    background-image: url(/img/carousel/4.jpg);
+}
+
+.carousel-item-5 {
+    background-image: url(/img/carousel/5.jpg);
+}
+
+.carousel-item-6 {
+    background-image: url(/img/carousel/6.jpg);
+}
+
+.carousel-item-7 {
+    background-image: url(/img/carousel/7.jpg);
+}
+
+.carousel-item-8 {
+    background-image: url(/img/carousel/8.jpg);
+}
+
+.carousel-item-9 {
+    background-image: url(/img/carousel/9.jpg);
+}
+
+.carousel-item-10 {
+    background-image: url(/img/carousel/10.jpg);
+}
+
+.pt-carousel-item-1 {
+    background-image: url(/img/pt/1.jpg);
+}
+
+.pt-carousel-item-2 {
+    background-image: url(/img/pt/2.jpg);
+}
+
+.pt-carousel-item-3 {
+    background-image: url(/img/pt/3.jpg);
+}
+
+.pt-carousel-item-4 {
+    background-image: url(/img/pt/4.jpg);
+}
+
+.pt-carousel-item-5 {
+    background-image: url(/img/pt/5.jpg);
+}
+
+.pt-carousel-item-6 {
+    background-image: url(/img/pt/6.jpg);
+}
+
+.pt-carousel-item-7 {
+    background-image: url(/img/pt/7.jpg);
+}
+
+.pt-carousel-item-8 {
+    background-image: url(/img/pt/8.jpg);
+}
+
+
+.carousel {
+    padding: 0 !important;
+    height: 500px;
+    /* max-height: 700px;
+    min-height: 300px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel div {
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
